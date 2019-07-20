@@ -1,6 +1,8 @@
 package com.dp.singleton;
 
-public class Singleton {
+import java.io.Serializable;
+
+public class Singleton implements Serializable {
 
 	private static Singleton instance = null;
 
@@ -15,6 +17,11 @@ public class Singleton {
 					instance = new Singleton();
 				}
 			}
+		return instance;
+	}
+
+	// to resolve the issue arises due to serialization.
+	protected Object readResolve() {
 		return instance;
 	}
 
