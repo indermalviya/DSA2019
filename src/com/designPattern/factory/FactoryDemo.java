@@ -1,4 +1,4 @@
-package com.dp.factory;
+package com.designPattern.factory;
 
 public class FactoryDemo {
 	public static void main(String[] args) {

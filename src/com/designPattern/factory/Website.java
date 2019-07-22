@@ -1,4 +1,4 @@
-package com.dp.factory;
+package com.designPattern.factory;
 
 import java.util.ArrayList;
 import java.util.List;

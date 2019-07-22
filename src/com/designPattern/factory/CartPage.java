@@ -1,4 +1,4 @@
-package com.dp.factory;
+package com.designPattern.factory;
 
 public class CartPage extends Page {
 

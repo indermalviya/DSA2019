@@ -1,4 +1,4 @@
-package com.dp.singleton;
+package com.designPattern.singleton;
 
 public class SingletonDriver {
 
