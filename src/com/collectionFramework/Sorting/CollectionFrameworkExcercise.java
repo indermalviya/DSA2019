@@ -17,10 +17,25 @@ public class CollectionFrameworkExcercise {
 		emp.add(new Employee("john", 7001, 89));
 		emp.add(new Employee("doe", 7801, 19));
 		
-		Collections.sort(emp);
-
-		for(Employee em:emp) {
-			System.out.println(em);
+		/*
+		 * Used for the comparable scenario
+		 * Collections.sort(emp);
+		 * 
+		 * for(Employee em:emp) { System.out.println(em); }
+		 */
+		
+		Collections.sort(emp, new IDComparator());
+		System.out.println("Sorting using the employeeID");
+		for(Employee em: emp) {
+			System.out.println("ID: " + em.getEmployeeID());
+		}
+		
+		System.out.println("");
+		
+		Collections.sort(emp, new NameComparator());
+		System.out.println("Sorting using the name");
+		for(Employee em: emp) {
+			System.out.println("name : " + em.getName() );
 		}
 	}
 
