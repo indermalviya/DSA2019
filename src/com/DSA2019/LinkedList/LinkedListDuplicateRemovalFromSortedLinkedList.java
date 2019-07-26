@@ -8,7 +8,7 @@ package com.DSA2019.LinkedList;
  *
  *         https://github.com/sourac
  */
-public class LinkedListDuplicateRemoval {
+public class LinkedListDuplicateRemovalFromSortedLinkedList {
 
 	Node head;
 
@@ -26,7 +26,7 @@ public class LinkedListDuplicateRemoval {
 
 	public static void main(String[] args) {
 
-		LinkedListDuplicateRemoval ldr = new LinkedListDuplicateRemoval();
+		LinkedListDuplicateRemovalFromSortedLinkedList ldr = new LinkedListDuplicateRemovalFromSortedLinkedList();
 		ldr.head = new Node(1);
 		ldr.head.next = new Node(2);
 		ldr.head.next.next = new Node(2);
@@ -35,7 +35,7 @@ public class LinkedListDuplicateRemoval {
 		ldr.head.next.next.next.next.next = new Node(4);
 		ldr.head.next.next.next.next.next.next = new Node(5);
 
-		Node returnhead = removeDuplicateFromLinkedList(ldr.head);
+		Node returnhead = removeDuplicateFromSortedLinkedList(ldr.head);
 		System.out.println("After removing duplicate from the linkedlist : ");
 		printLinkedList(returnhead);
 
@@ -54,8 +54,9 @@ public class LinkedListDuplicateRemoval {
 
 	/**
 	 * @param head
+	 * this only works, when the nodes are sorted in the linkedlist
 	 */
-	private static Node removeDuplicateFromLinkedList(Node head) {
+	private static Node removeDuplicateFromSortedLinkedList(Node head) {
 		if (head == null) {
 			return null;
 		}
