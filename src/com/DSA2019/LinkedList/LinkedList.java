@@ -1,11 +1,8 @@
 package com.DSA2019.LinkedList;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class LinkedList {
 	
-	private static final Logger log = LoggerFactory.getLogger(LinkedList.class.getName());
 
 	LinkedListNode head;
 
@@ -44,7 +41,27 @@ public class LinkedList {
 
 		System.out.println("finding the middle element of the linkedlist: ");
 		llist.findTheMiddleNode();
+		
+		System.out.println("reversing the linkedlist  ");
+		llist.reversingTheLinkedList(llist.head);
 
+	}
+
+	/**
+	 * @param head2
+	 */
+	private void reversingTheLinkedList(LinkedListNode head) {
+		
+		LinkedListNode currentNode=head;
+		LinkedListNode prevNode=null;
+		LinkedListNode nextNode=null;
+		
+		while(currentNode!=null) {
+			nextNode=currentNode.next;
+			currentNode.next=prevNode;
+			prevNode=currentNode;
+			currentNode=nextNode;
+		}
 	}
 
 	/**
