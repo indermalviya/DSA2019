@@ -1,6 +1,11 @@
 package com.DSA2019.LinkedList;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class LinkedList {
+	
+	private static final Logger log = LoggerFactory.getLogger(LinkedList.class.getName());
 
 	LinkedListNode head;
 
@@ -24,8 +29,8 @@ public class LinkedList {
 		llist.head.next = new LinkedListNode(2);
 		llist.head.next.next = new LinkedListNode(3);
 		llist.head.next.next.next = new LinkedListNode(4);
-		
-        //barebone linkeslist
+
+		// barebone linkeslist
 		llist.printList();
 		// pushing at the beginning of the linkedlist
 		llist.push(0);
@@ -37,11 +42,30 @@ public class LinkedList {
 		llist.insertAfter(llist.head.next, 7);
 		llist.printList();
 
+		System.out.println("finding the middle element of the linkedlist: ");
+		llist.findTheMiddleNode();
+
+	}
+
+	/**
+	 * 
+	 */
+	private void findTheMiddleNode() {
+
+		LinkedListNode slowPtr = head;
+		LinkedListNode fastPtr = head;
+		if (head != null) {
+			while (fastPtr != null && fastPtr.next != null) {
+				fastPtr = fastPtr.next.next;
+				slowPtr = slowPtr.next;
+			}
+			System.out.println("Middle of the linkedlist : " + slowPtr.data);
+		}
 	}
 
 	private void insertAfter(LinkedListNode prevNode, int data) {
 
-		System.out.println("inserting after certain node : " + prevNode.data +" value :  " + data);
+		System.out.println("inserting after certain node : " + prevNode.data + " value :  " + data);
 
 		LinkedListNode lnode = new LinkedListNode(data);
 		LinkedListNode temp = prevNode.next;
