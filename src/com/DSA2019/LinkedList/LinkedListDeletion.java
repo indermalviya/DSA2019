@@ -33,7 +33,19 @@ public class LinkedListDeletion {
 
 		System.out.println("Linkedlist After deleting node : ");
 		lld.printLinkedListNodes();
+		System.out.println();
 
+		System.out.println("Delete the whole linkedlist: ");
+		lld.deleteWholeLinkedList();
+		lld.printLinkedListNodes();
+
+	}
+
+	/**
+	 * 
+	 */
+	private void deleteWholeLinkedList() {
+		head = null;
 	}
 
 	// delete a specific node in linkedlist
