@@ -4,6 +4,7 @@
 package com.DSA2019.Graph;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 /**
  * @author Atul Sharma
@@ -44,8 +45,34 @@ public class GraphBFS {
 	/**
 	 * @param i
 	 */
-	private  void bFSInGrapgh(int i) {
-		
+	// this will give BFS from given verted
+	private void bFSInGrapgh(int i) {
+
+		// mark all the vertex as not visited, default set to false.
+		boolean[] visited = new boolean[V];
+
+		LinkedList<Integer> queue = new LinkedList<Integer>();
+
+		// make the current vertex as visited
+		visited[i] = true;
+		queue.add(i);
+
+		while (!queue.isEmpty()) {
+			// dequeue a vertex from the queue and print it.
+			i = queue.poll();
+			System.out.print(i + " ");
+			ListIterator<Integer> iterator = adjListArray[i].listIterator();
+
+			while (iterator.hasNext()) {
+				int n = iterator.next();
+				if (!visited[n]) {
+					visited[n] = true;
+					queue.add(n);
+				}
+			}
+
+		}
+
 	}
 
 }
