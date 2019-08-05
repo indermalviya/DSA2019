@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.DSA2019.threads;
+package com.DSA2019.Threads;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
