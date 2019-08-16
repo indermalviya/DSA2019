@@ -30,7 +30,7 @@ public class Student {
 
 		Student std = (Student) obj;
 
-		return age == std.age && Objects.equals(age, std.age) && Objects.equals(classSequence, std.classSequence);
+		return name == std.name && Objects.equals(age, std.age) && Objects.equals(classSequence, std.classSequence);
 
 	}
 

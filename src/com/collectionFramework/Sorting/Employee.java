@@ -1,7 +1,5 @@
 package com.collectionFramework.Sorting;
 
-import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
-
 public class Employee implements Comparable<Employee> {
 
 	Integer age;
