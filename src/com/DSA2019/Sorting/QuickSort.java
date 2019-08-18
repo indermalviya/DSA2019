@@ -7,7 +7,7 @@ package com.DSA2019.Sorting;
  * @author Atul Sharma
  *
  *         https://github.com/sourac
- *         
+ * 
  *         Runtime complexity: O(nlogn) in average and O(n2) worst
  */
 public class QuickSort {
@@ -22,8 +22,8 @@ public class QuickSort {
 	 * 
 	 */
 	private void doTheQuickSort() {
-		//int[] A = new int[] { 7, 6, 10, 5, 9, 2, 1, 15, 7 };
-		int[] A = new int[] { 12, 13, 24, 10, 3, 6, 90, 70  };
+		// int[] A = new int[] { 7, 6, 10, 5, 9, 2, 1, 15, 7 };
+		int[] A = new int[] { 12, 13, 24, 10, 3, 6, 90, 70 };
 		System.out.println("Before sorting using quicksort..");
 		for (int a : A) {
 			System.out.print(a + " ");
@@ -66,7 +66,7 @@ public class QuickSort {
 		while (start < end) {
 			while (a[start] <= pivot) {
 				start++;
-				if(start>end) {
+				if (start > end) {
 					break;
 				}
 			}
@@ -80,7 +80,6 @@ public class QuickSort {
 			}
 
 		}
-
 		swap(a, lb, end);
 
 		return end;
